@@ -49,8 +49,8 @@ jobs:
                 docker run -d -p 8000:8000 --name test-calculator calculator-api:${{ github.sha }}
                 sleep 10
                 curl http://localhost:8000/health
-                docker stop test-container
-                docker rm test-container
+                docker stop test-calculator
+                docker rm test-calculator
 
             - name: Build success
               run: echo "🐳 Docker build completed successfully!"
