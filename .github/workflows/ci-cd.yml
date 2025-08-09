@@ -39,7 +39,7 @@ jobs:
 
         steps:
             - name: Check out code
-              run: actions/checkout@v4
+              uses: actions/checkout@v4
 
             - name: Build docker image
               run: docker build -t calculator-api:${{ github.sha }} .
